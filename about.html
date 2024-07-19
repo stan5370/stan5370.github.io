@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefining Ergonomic Keyboards</title>
+    <link rel="stylesheet" href="styles.css">
+    <noscript>
+        <style>
+            .hamburger { display: none !important; }
+            nav { display: flex !important; }
+            @media (max-width: 768px) {
+                nav {
+                    position: static !important;
+                    background: none !important;
+                    border: none !important;
+                    flex-direction: row !important;
+                    justify-content: space-around !important;
+                    width: auto !important;
+                }
+                nav a {
+                    border: none !important;
+                    padding: 0 !important;
+                }
+            }
+        </style>
+    </noscript>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('js-enabled');
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">[Logo]</div>
+        <button type="button" title="Click or press space to expand" class="hamburger"><i class="fa fa-bars"></i></button>
+        <nav>
+            <a href="landing.html">Home</a>
+            <a href="builder.html">Builder</a>
+            <a href="about.html">About</a>
+            <a href="wiki.html">Wiki</a>
+        </nav>
+        <button type="button" title="Click to search" class="search-icon"><i class="fa fa-search"></i></button>
+    </header>
+
+    <div class="fade"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('nav');
+
+            hamburger.addEventListener('click', () => {
+                const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+                hamburger.setAttribute('aria-expanded', !expanded);
+                hamburger.classList.toggle('active');
+            });
+        });
+    </script>
+    <main>
+        <div class="title-container">
+            <div class="title-container" id="test"></div>
+            <h1 style="color: #fff;">About Us</h1>
+        </div>
+        <div class="content">
+            <div class="text-content">
+                <h2>Overview</h2>
+                <ul>
+                    <div>
+                        <p>Paragraph text and stuff...</p>
+                    </div>
+                    <div>
+                        <p>Sub text</p>
+                    </div>
+                </ul>
+            </div>
+            <div class="image-content">
+                <img src="devkitkeeb square-min.jpg" alt="Development of an Ortho Keyboard">
+            </div>
+        </div>
+        <div class="content">
+            <div class="text-content">
+                <h2 style="text-align: center;">Our Mission</h2>
+                <ul>
+                    <div>
+                        <p>Sub text</p>
+                    </div>
+                    <div>
+                        <p>Sub text</p>
+                    </div>
+                </ul>
+            </div>
+    </main>
+
+    <footer>
+        <p>Footer Stuff Here</p>
+    </footer>
+</body>
+</html>
