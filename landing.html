@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updated Wireframe</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .keyboard-container {
+            display: flex;
+            margin: 20px auto;
+            height: 75vh;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .keyboard-section {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            background-color: #f0f5f9;
+            transition: all 0.3s ease;
+        }
+        .keyboard-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .keyboard-section a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            height: 100%;
+        }
+        .keyboard-section h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .keyboard-section p {
+            font-size: 0.9em;
+        }
+        #faq-section { 
+            background-color: #e0f0e3; 
+/*                 
+            filter: opacity(80%) blur(2px) brightness(80%);
+            background-image: url('left.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; */
+        }
+        #custom-section { background-color: #ffefd5; }
+        #about-section { background-color: #e6f3ff; }
+        
+        #faq-section:hover { background-color: #c7e6d1; }
+        #custom-section:hover { background-color: #ffe0b3; }
+        #about-section:hover { background-color: #c7e0ff; }
+    </style>
+    <noscript>
+        <style>
+            .hamburger { display: none !important; }
+            nav { display: flex !important; }
+            @media (max-width: 768px) {
+                nav {
+                    position: static !important;
+                    background: none !important;
+                    border: none !important;
+                    flex-direction: row !important;
+                    justify-content: space-around !important;
+                    width: auto !important;
+                }
+                nav a {
+                    border: none !important;
+                    padding: 0 !important;
+                }
+            }
+        </style>
+    </noscript>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('js-enabled');
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">[Logo]</div>
+        <button type="button" title="Click or press space to expand" class="hamburger"><i class="fa fa-bars"></i></button>
+        <nav>
+            <a href="landing.html">Home</a>
+            <a href="builder.html">Builder</a>
+            <a href="about.html">About</a>
+            <a href="wiki.html">Wiki</a>
+        </nav>
+        <button type="button" title="Click to search" class="search-icon"><i class="fa fa-search"></i></button>
+    </header>
+
+    <div class="fade"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('nav');
+
+            hamburger.addEventListener('click', () => {
+                const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+                hamburger.setAttribute('aria-expanded', !expanded);
+                hamburger.classList.toggle('active');
+                //nav.style.display = hamburger.style.display == 'none' ? 'flex' : expanded ? 'none' : 'flex';
+            });
+        });
+    </script>
+    <main>
+        <div class="keyboard-container">
+            <div id="faq-section" class="keyboard-section">
+                <a href="/wiki.html">
+                    <h2>FAQ / Wiki</h2>
+                    <p>Click here to learn about keyboards!</p>
+                </a>
+            </div>
+            <div id="custom-section" class="keyboard-section">
+                <a href="/builder.html">
+                    <h2>Custom keyboards built around your hands</h2>
+                    <p>Click to make your own!</p>
+                </a>
+            </div>
+            <div id="about-section" class="keyboard-section">
+                <a href="/about.html">
+                    <h2>About us</h2>
+                    <p>Click here to learn about our mission!</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>footer goes here</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefining Ergonomic Keyboards</title>
+    <link rel="stylesheet" href="styles.css">
+    <noscript>
+        <style>
+            .hamburger { display: none !important; }
+            nav { display: flex !important; }
+            @media (max-width: 768px) {
+                nav {
+                    position: static !important;
+                    background: none !important;
+                    border: none !important;
+                    flex-direction: row !important;
+                    justify-content: space-around !important;
+                    width: auto !important;
+                }
+                nav a {
+                    border: none !important;
+                    padding: 0 !important;
+                }
+            }
+        </style>
+    </noscript>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('js-enabled');
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">[Logo]</div>
+        <button type="button" title="Click or press space to expand" class="hamburger"><i class="fa fa-bars"></i></button>
+        <nav>
+            <a href="landing.html">Home</a>
+            <a href="builder.html">Builder</a>
+            <a href="about.html">About</a>
+            <a href="wiki.html">Wiki</a>
+        </nav>
+        <button type="button" title="Click to search" class="search-icon"><i class="fa fa-search"></i></button>
+    </header>
+
+    <div class="fade"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('nav');
+
+            hamburger.addEventListener('click', () => {
+                const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+                hamburger.setAttribute('aria-expanded', !expanded);
+                hamburger.classList.toggle('active');
+            });
+        });
+    </script>
+    <main>
+        <div class="content" style="height:85vmin">
+            <div>
+                <div class="text-content">
+                    <h2>Step Title & Action Items</h2>
+                    <div class="buttons">
+                        <button>(Example) UPLOAD</button>
+                    </div>
+                </div>
+                <div class="text-content">
+                    <h2>Brief Explanation & Importance</h2>
+                    <a href="#">Links to popup</a>
+                    <div class="buttons">
+                        <button>BACK</button>
+                        <button>SKIP</button>
+                        <button>NEXT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="image-content">
+                <p>
+                    Output Image from Configurator
+                </p>
+                <div class="image-container">
+                    <img id="imgZoom" src="keeb.png" alt="Output of Configurator">
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>footer goes here</p>
+    </footer>
+</body>
+</html>
