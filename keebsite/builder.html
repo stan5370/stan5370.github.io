@@ -71,18 +71,12 @@
         <div class="content" style="height:85vmin">
             <div>
                 <div class="text-content">
-                    <h2>Step Title & Action Items</h2>
+                    <h2>Change Keyboard Color!</h2>
+                    <p>
+                        Use the button below to change the color of the keyboard.
+                    </p>
                     <div class="buttons">
-                        <button>(Example) UPLOAD</button>
-                    </div>
-                </div>
-                <div class="text-content">
-                    <h2>Brief Explanation & Importance</h2>
-                    <a href="#">Links to popup</a>
-                    <div class="buttons">
-                        <button>BACK</button>
-                        <button>SKIP</button>
-                        <button>NEXT</button>
+                        <button id="next-btn">NEXT COLOR</button>
                     </div>
                 </div>
             </div>
@@ -90,7 +84,7 @@
                 
                 
                 <p>
-                    Output Image from Configurator - You have to zoom out a bit
+                    Output Image from Configurator - You have to zoom out a bit!
                 </p>
             </div>
         </div>
@@ -166,6 +160,12 @@
             }
             
             render()
+        }
+
+        document.getElementById ("next-btn").addEventListener ("click", changeColor, false);
+
+        function changeColor() {
+            mesh.material.color.setHex(Math.random() * 0xffffff)
         }
 
         function render() {
