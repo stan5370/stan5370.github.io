@@ -9,10 +9,28 @@ li.active {
 }
 
 .btn-primary {
-    background-color: #5b369e;
-    border-color: #655485;
+    background-color: #ac80ff;
+    border-color: #ac80ff;
     --bs-btn-bg: #655485;
     --bs-btn-border-color: #655485;
+}
+
+.btn-secondary:hover {
+    background-color: #ac80ff;
+    border-color: #ac80ff;
+    --bs-btn-bg: #ac80ff;
+    --bs-btn-border-color: #ac80ff;
+}
+
+.btn-outline-primary {
+    color: #ac80ff;
+    border-color: #ac80ff;
+}
+
+.btn-outline-primary:hover {
+    color: #FFF;
+    background-color: #ac80ff;
+    border-color: #ac80ff;
 }
 
 /* News and Trophies */
