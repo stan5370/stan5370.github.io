@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+.carousel-caption {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-caption p {
+    color: #000;
+}
+
+.carousel-caption h5 {
+    color: #000;
+}
+
 .nav-link {
     --bs-nav-link-font-size: 1.2rem;
 }
